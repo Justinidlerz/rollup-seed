@@ -1,5 +1,5 @@
-import buble from 'rollup-plugin-buble';
 import typescript from 'rollup-plugin-typescript2';
+import babel from 'rollup-plugin-babel';
 
 const pkg = require('./package.json');
 
@@ -7,7 +7,7 @@ export default {
   input: 'src/index.ts',
   plugins: [
     typescript(),
-    buble(),
+    babel(),
   ],
   external: Object.keys(pkg.dependencies),
   output: [
